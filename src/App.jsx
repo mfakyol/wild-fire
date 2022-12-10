@@ -1,4 +1,3 @@
-import "./App.css";
 import WildFireView from "./views/WildFireView";
 
 function App() {

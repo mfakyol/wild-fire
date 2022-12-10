@@ -5,24 +5,16 @@ function Map() {
   useEffect(() => {
     function initMap() {
       const map = new window.google.maps.Map(document.getElementById("map"), {
-        center: { lat: 40.7413549, lng: -73.9980244 },
-        zoom: 14,
-        // styles:styles,
+        center: { lat: 20, lng: 0 },
+        zoom: 3,
         streetViewControl: false,
         mapTypeControl: false,
       });
-      //console.log(map)
+
       window.map = map;
     }
 
     initMap();
-
-    var marker = new window.google.maps.Marker({
-      position: { lat: 40.7413549, lng: -73.9980244 },
-      title: "Hello World!",
-    });
-
-    marker.setMap(window.map);
   }, []);
 
   return <div id="map" className={classes.map} />;
